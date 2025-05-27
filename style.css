@@ -3,7 +3,6 @@ body{
     background-color: #f2f2f2;
 }
 #container-menu {
-        gap: 45px;
     display: flex
 ;
     flex-wrap: wrap;
