@@ -1,0 +1,41 @@
+
+body{
+    background-color: #f2f2f2;
+}
+#container-menu {
+        gap: 45px;
+    display: flex
+;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 150vw;
+}
+
+#menu-cards{
+            padding: 0px 22px 0px 22px;
+
+}.contenedor-uno , .contenedor-dos {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center; /* o 'flex-start' si querés alineación a la izquierda */
+  align-items: flex-start; /* importante para que se alineen arriba, no al centro */
+}
+.contenedor-imag{
+    display: flex
+;gap: 14px;
+    flex-direction: column;
+}
+@media (min-width: 1024px) {
+#container-menu{
+    width: auto;
+    margin: 30px;
+}
+
+.contenedor-uno , .contenedor-dos{
+    width: 50%;
+}}
+
+.contenedor-uno img, .contenedor-dos img{
+
+}
