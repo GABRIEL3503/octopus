@@ -9,9 +9,7 @@ body{
     flex-direction: row;
     width: 160vw;
 }
-.contenedor-dos{
-    margin-top: 20px;
-}
+
 .contenedor-uno , .contenedor-dos {
   display: flex;
   gap: 14px;
@@ -36,4 +34,8 @@ body{
 
 .contenedor-uno img, .contenedor-dos img{
 
+}
+
+.contenedor-dos{
+    margin-top: 20px;
 }
