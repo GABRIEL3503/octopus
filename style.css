@@ -9,11 +9,10 @@ body{
     flex-direction: row;
     width: 160vw;
 }
-
-#menu-cards{
-            padding: 0px 22px 0px 22px;
-
-}.contenedor-uno , .contenedor-dos {
+.contenedor-dos{
+    margin-top: 20px;
+}
+.contenedor-uno , .contenedor-dos {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
