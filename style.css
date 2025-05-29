@@ -22,15 +22,6 @@ body{
 ;gap: 14px;
     flex-direction: column;
 }
-@media (min-width: 1024px) {
-#container-menu{
-    width: auto;
-    margin: 30px;
-}
-
-.contenedor-uno , .contenedor-dos{
-    width: 50%;
-}}
 
 .contenedor-uno img, .contenedor-dos img{
 
@@ -39,3 +30,33 @@ body{
 .contenedor-dos{
     margin-top: 20px;
 }
+
+nav{
+    display: flex
+;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding: 60px 30px 60px 30px;
+}
+
+@media (min-width: 1024px) {
+nav{
+        display: flex
+;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 60px 30px 60px 30px;
+    justify-content: space-between;
+    width: auto;
+}
+
+    
+
+#container-menu{
+    width: auto;
+    margin: 30px;
+}
+
+.contenedor-uno , .contenedor-dos{
+    width: 50%;
+}}
