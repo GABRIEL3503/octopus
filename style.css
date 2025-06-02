@@ -119,6 +119,7 @@ footer {
 
 @media (min-width: 1024px) {
 .container-footer {
+    width: auto;
     display: flex;
     font-size: 22px;
     gap: 18px;
