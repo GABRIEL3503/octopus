@@ -130,8 +130,49 @@ font-size: 24px;    }
   height: auto;
   background-color: rgba(0, 0, 0, 0.4); /* sombra sutil para texto encima */
 }
+.banner-promocional {
+  background-color: #111; /* línea negra */
+  color: white;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px; /* espacio vertical para la imagen montada */
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 14px;
+    width: 100vw;
+margin: 84px 0px;
+}
+
+.banner-promocional .texto-izquierda,
+.banner-promocional .texto-derecha {
+  flex: 1;
+}
+
+.banner-promocional .imagen-central {
+  position: absolute;
+  top: -50%; /* la "saca" fuera de la franja */
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 144px;
+  height: auto;
+  z-index: 1;
+}
+
 
 @media (min-width: 1024px) {
+  .banner-promocional {
+    margin: 180px 40px;}
+  .banner-promocional .imagen-central {
+  position: absolute;
+  top: -170%; /* la "saca" fuera de la franja */
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 344px;
+  height: auto;
+  z-index: 1;
+}
   .titulo{
     font-size: 44px;
   }
@@ -205,6 +246,11 @@ font-size: 24px;    }
       <div class="addon" data-price="1000">Estadísticas de días y horas con más visitas. <span class="check"></span></div>
     </div>
   </div>
+<section class="banner-promocional">
+  <div class="texto-izquierda">cartelería de regalo</div>
+  <img src="/img/secciónCarteleriaCarta.png" alt="Cartel promocional" class="imagen-central">
+  <div class="texto-derecha">Visità nuestra tienda</div>
+</section>
 
   <script>
     const basePrice = 28800;
