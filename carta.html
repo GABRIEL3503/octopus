@@ -20,6 +20,14 @@
       align-items: center;
    
     }
+    nav {
+    width: 100%;
+    display: flex
+;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding: 60px 30px 60px 30px;
+}
    .pricing-card {
     height: auto;
     background: white;
@@ -89,13 +97,88 @@
       background: #0077cc;
       border-color: #0077cc;
     }
+    .patagonia{
+      width: 200px;
+    }
+    .logo-nav{
+      width: 300px;
+    }
+    .titulo{
+      padding: 22px;
+font-size: 24px;    }
+.hero {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* sombra sutil para texto encima */
+}
+
+@media (min-width: 1024px) {
+.container-footer {
+    width: auto;
+    display: flex;
+    font-size: 22px;
+    gap: 18px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+    .container-slide img {
+        margin-left: 80px;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 60px 30px 60px 30px;
+        justify-content: space-between;
+        width: 90%;
+    }
+
+
+
+    #container-menu {
+        width: auto;
+        margin: 30px;
+    }
+
+    .contenedor-uno,
+    .contenedor-dos {
+        width: 50%;
+    }
+}
   </style>
 </head>
 <body>
-    <nav> <img src="img/octopusSoluciones.png" alt="">
-        <img src="img/patagoniaArgentina.png" alt="">
+    <nav> <img class="logo-nav" src="img/octopusSoluciones.png" alt="">
+        <img class="patagonia" src="img/patagoniaArgentina.png" alt="">
     </nav>
-    <h1>ARMÁ TU PLAN A MEDIDA</h1>
+
+    <section class="hero">
+  <img src="img/heroSeccionCarta.webp" alt="">
+  <div class="overlay"></div>
+</section>
+
+    <h1 class="titulo">ARMÁ TU PLAN A MEDIDA</h1>
   <div class="pricing-card">
     <h2>SUSCRIPCIÓN MENSUAL</h2>
     <div class="price" id="price">$28.800</div>
