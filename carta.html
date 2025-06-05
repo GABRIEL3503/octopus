@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+  <title>Suscripción Mensual</title>
+  <style>
+    body {
+    font-family: "Nunito Sans", sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   
+    }
+   .pricing-card {
+    height: auto;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    max-width: 356px;
+    width: 74%
+;}
+    .pricing-card h2 {
+      text-align: center;
+      font-size: 1rem;
+      color: #555;
+    }
+    .price {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 1rem 0;
+    }
+    .features,
+    .addons {
+      margin-top: 1rem;
+    }
+    .features{
+        border-radius: 8px;
+        background-color: #d2eff5;
+;
+;
+    }
+   
+    .feature,
+    .addon {
+        font-weight: 500;
+      padding: 8px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .addons{
+        font-size: 10px;
+    }
+     .addon{
+        margin-bottom: 4px;
+        padding: 8px;
+        background-color:#e9f4f8 ;
+    }
+    .feature {
+        font-size: 10px;
+      cursor: default;
+    }
+    .addon.active {
+      background: #d2eff5;
+      font-weight: bold;
+    }
+    .addon .check {
+      width: 8px;
+      height: 8px;
+      border: 2px solid #ccc;
+      border-radius: 50%;
+    }
+    .addon.active .check {
+      background: #0077cc;
+      border-color: #0077cc;
+    }
+  </style>
+</head>
+<body>
+    <!-- <nav> <img src="img/octopusSoluciones.png" alt="">
+        <img src="img/patagoniaArgentina.png" alt="">
+    </nav> -->
+  <div class="pricing-card">
+    <h2>SUSCRIPCIÓN MENSUAL</h2>
+    <div class="price" id="price">$28.800</div>
+
+    <div class="features">
+      <div class="feature">Cargá y editá productos fácilmente.</div>
+      <div class="feature">Organizá productos en Secciones y Categorías.</div>
+      <div class="feature">Mové y reorganizá productos como quieras.</div>
+      <div class="feature">Ocultar elementos sin stock.</div>
+      <div class="feature">Asesoramiento y asistencia técnica.</div>
+      <div class="feature">Mejoras y actualizaciones periódicamente.</div>
+    </div>
+
+    <div class="addons">
+      <div class="addon" data-price="1000">Hasta 30 productos <span class="check"></span></div>
+      <div class="addon" data-price="2000">Hasta 90 productos <span class="check"></span></div>
+      <div class="addon" data-price="3000">Más de 90 productos <span class="check"></span></div>
+      <div class="addon" data-price="1500">Sección para recibir y administrar Pedidos. <span class="check"></span></div>
+      <div class="addon" data-price="1500">Sección de Reseñas para posicionar en Google. <span class="check"></span></div>
+      <div class="addon" data-price="1000">Contador de visitas. <span class="check"></span></div>
+      <div class="addon" data-price="1000">Estadísticas de días y horas con más visitas. <span class="check"></span></div>
+    </div>
+  </div>
+
+  <script>
+    const basePrice = 28800;
+    let totalPrice = basePrice;
+    const priceDisplay = document.getElementById('price');
+    const addons = document.querySelectorAll('.addon');
+
+    addons.forEach(addon => {
+      addon.addEventListener('click', () => {
+        const price = parseInt(addon.dataset.price);
+        addon.classList.toggle('active');
+
+        if (addon.classList.contains('active')) {
+          totalPrice += price;
+        } else {
+          totalPrice -= price;
+        }
+
+        priceDisplay.textContent = `$${totalPrice.toLocaleString('es-AR')}`;
+      });
+    });
+  </script>
+</body>
+</html>
