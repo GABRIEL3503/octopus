@@ -46,7 +46,7 @@ nav {
 #carrusel {
     padding: 44px;
     border-radius: 38px;
-    background-color: #FFFFFF;
+background: linear-gradient(to bottom, #ffffff, #e5e5e5);
     width: 500px;
     height: 200px;
 }
