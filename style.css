@@ -14,7 +14,7 @@ body {
 .contenedor-uno,
 .contenedor-dos {
     display: flex;
-    gap: 14px;
+    gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
     /* o 'flex-start' si querés alineación a la izquierda */
@@ -32,7 +32,7 @@ body {
 .contenedor-dos img {}
 
 .contenedor-dos {
-    margin-top: 20px;
+    margin-top: 14px;
 }
 
 nav {
@@ -118,6 +118,9 @@ footer {
 }
 
 @media (min-width: 1024px) {
+    .contenedor-dos {
+    margin-top: 0px;
+}
 .container-footer {
     width: auto;
     display: flex;
@@ -143,12 +146,15 @@ footer {
 
 
     #container-menu {
-        width: auto;
+               width: auto;
+        display: flex
+;gap: 0px;
         margin: 30px;
+        justify-content: center;
     }
 
     .contenedor-uno,
     .contenedor-dos {
-        width: 50%;
+        width: 38%;
     }
 }
