@@ -28,13 +28,30 @@ body {
     flex-direction: column;
 }
 
+
 .contenedor-uno img,
 .contenedor-dos img {}
 
 .contenedor-dos {
     margin-top: 14px;
 }
+.en-construccion-container h1{
+    text-align: center;
+}
+.en-construccion-container p{
+    text-align: center;
+}
 
+.en-construccion-container {
+    background-color: #e2e2e2;
+     padding: 0px 100px;
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
 nav {
     display: flex;
     flex-direction: column-reverse;
@@ -42,7 +59,9 @@ nav {
     padding: 60px 30px 60px 30px;
 }
 
-
+.en-construccion{
+    width: 360px;
+}
 #carrusel {
     padding: 44px;
     border-radius: 38px;
