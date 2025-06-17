@@ -4,8 +4,437 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+     <style>
+        body {
+            font-family: 'Nunito Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  } */
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .benefits-list,
+        .checklist {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .benefits-list li,
+        .checklist li {
+            background: white;
+            padding: 26px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            font-size: 1.3rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+.checklist li::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url('/img/check.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+
+
+        @media (max-width: 600px) {
+
+            .benefits-list,
+            .checklist {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        body {
+            font-family: "Nunito Sans", sans-serif;
+            background: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        nav {
+            width: 100vw;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-start;
+            padding: 34px 0px 60px 0px;
+        }
+
+        .pricing-card {
+            height: auto;
+            border-radius: 8px;
+            padding: 1.2rem;
+            max-width: 388px;
+            width: 86%;
+        }
+
+        .pricing-card h2 {
+          padding: 60px 22px 12px;
+    text-align: center;
+    font-size: 1.6rem;
+    color: #555;
+        }
+
+        .price {
+            color: #393939;
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .features,
+        .addons {
+            margin-top: 1rem;
+        }
+
+        .features {
+            padding: 12px;
+            border-radius: 8px;
+            background-color: #bfe6ee57;
+            ;
+            ;
+        }
+
+        .feature,
+        .addon {
+            font-weight: 500;
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .addons {
+            font-size: 16px;
+        }
+
+        .addon {
+            margin-bottom: 4px;
+            padding: 14px 22px;
+            background-color: #f4f4f4;
+            ;
+        }
+
+        .feature {
+            font-size: 16px;
+            cursor: default;
+        }
+
+        .addon.active {
+            background: #bfe6ee57;
+        }
+
+        .addon .check {
+            background-color: white;
+            width: 18px;
+            height: 18px;
+            border: 1px solid #eeeeee;
+            border-radius: 50%;
+        }
+
+        .addon.active .check {
+            background: #def1ff;
+            ;
+            border-color: #0077cc;
+        }
+
+        .patagonia {
+            width: 200px;
+        }
+
+        .logo-nav {
+            width: 300px;
+        }
+
+        .titulo {
+            text-align: center;
+            font-weight: 800;
+            padding: 22px;
+            font-size: 26px;
+        }
+
+        .hero {
+            position: relative;
+            width: 100vw;
+            height: auto;
+            overflow: hidden;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .hero .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            /* sombra sutil para texto encima */
+        }
+
+        .banner-promocional {
+            background-color: #111;
+            /* línea negra */
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 0px;
+            /* espacio vertical para la imagen montada */
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 14px;
+            width: 100vw;
+            margin: 84px 0px;
+        }
+
+        .banner-promocional .texto-izquierda,
+        .banner-promocional .texto-derecha {
+            flex: 1;
+        }
+
+        .banner-promocional .imagen-central {
+            position: absolute;
+            top: -70%;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 164px;
+            height: auto;
+            z-index: 1;
+        }
+
+        footer {
+            padding: 40px 0PX;
+            width: 100vw;
+        }
+
+        .container-footer {
+            width: auto;
+            padding: 20px 10px;
+            display: flex;
+            font-size: 11px;
+            gap: 18px;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: flex-start;
+        }
+
+        footer img {
+            width: 160px;
+            padding: 20px 10px;
+        }
+
+        h2 {
+            margin-top: -14px;
+            font-weight: 500;
+            text-align: center;
+            font-size: 24px;
+            padding: 0px 14px;
+        }
+
+        .container-f {
+            /* width: 73vw; */
+            display: flex;
+            padding: 0px 10px;
+            align-items: center;
+            gap: 6px;
+            justify-content: space-around;
+            font-size: 12px;
+        }
+        .benefits-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.benefits-list li svg.icon {
+  flex-shrink: 0;
+  color: #4f46e5; /* Azul violeta moderno */
+  margin-top: 4px;
+}
+.benefits-list img{
+    width: 60px;
+}
+  .diferencial-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .diferencial-list li {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+.diferencial-list li::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('/img/check.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+
+  @media (max-width: 600px) {
+    .diferencial-list {
+      grid-template-columns: 1fr;
+    }
+  }
+        @media (min-width: 1024px) {
+h2 {
+           
+            font-size: 32px;}
+            .pricing-card {
+                height: auto;
+                border-radius: 8px;
+                padding: 2rem;
+                max-width: 888px;
+                width: 74%
+            }
+
+            footer img {
+                width: 400px;
+                padding: 20px 40px;
+            }
+
+            .banner-promocional {
+                margin: 180px 40px;
+            }
+
+            .banner-promocional .imagen-central {
+                position: absolute;
+                top: -170%;
+                /* la "saca" fuera de la franja */
+                left: 50%;
+                transform: translateX(-50%);
+                max-width: 344px;
+                height: auto;
+                z-index: 1;
+            }
+
+            .titulo {
+                font-size: 44px;
+            }
+
+            .container-footer {
+                width: auto;
+                display: flex;
+                font-size: 22px;
+                gap: 18px;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: flex-start;
+            }
+
+            .container-slide img {
+                margin-left: 80px;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 60px 30px 60px 30px;
+                justify-content: space-between;
+                width: 90%;
+            }
+
+
+
+            #container-menu {
+                width: auto;
+                margin: 30px;
+            }
+
+            .contenedor-uno,
+            .contenedor-dos {
+                width: 50%;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+      <nav> <a href="index.html"><img class="logo-nav" src="img/octopusSoluciones.png" alt=""></a>
+        <img class="patagonia" src="img/patagoniaArgentina.png" alt="">
+    </nav>
+
+    <section class="hero">
+        <img src="img/heroSeccionCarta.webp" alt="">
+        <div class="overlay"></div>
+    </section>
+
+    <h1 class="titulo">Sitios web pensados para vos. A tu medida.</h1>
+    <h2>      Diseñamos tu sitio desde cero, con tu estilo, y si querés, podés administrarlo vos mismo.
+</h2>
+
+    <div class="pricing-card">
+
+ <section class="diferencial-section">
+   
+    <ul class="diferencial-list">
+      <li>100% a medida, adaptado a tus necesidades reales.</li>
+      <li>Secciones autoadministrables si querés tener el control.</li>
+      <li>Visual único: colores, estructura y estilo personalizado.</li>
+      <li>Nos ocupamos de todo si preferís delegar.</li>
+      <li>Optimizado para celulares, rápido y fácil de navegar.</li>
+      <li>Una inversión que se adapta a tu proyecto y crece con vos.</li>
+    </ul>
+  </section>
+
+
+
+
 </body>
 </html>
